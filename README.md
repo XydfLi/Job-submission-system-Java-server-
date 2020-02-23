@@ -1,5 +1,5 @@
 # Job-submission-system-Java-server-
-作业提交系统（Java服务端）
+作业提交系统（前后端合作）（Java服务端）
 
 ## 使用工程
 
