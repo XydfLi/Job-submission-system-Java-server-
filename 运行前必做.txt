@@ -1,0 +1,15 @@
+1、
+使用本项目自带Tomcat，或者进行以下操作
+（1）在apache-tomcat-7.0.99\conf\web.xml中加入
+<init-param>
+<param-name>readonly</param-name>
+<param-value>false</param-value>
+</init-param>
+（2）打开apache-tomcat-7.0.99\conf\logging.properties文件
+1catalina.org.apache.juli.FileHandler.encoding = UTF-8
+2localhost.org.apache.juli.FileHandler.encoding = UTF-8
+3manager.org.apache.juli.FileHandler.encoding = UTF-8
+4host-manager.org.apache.juli.FileHandler.encoding = UTF-8
+java.util.logging.ConsoleHandler.encoding = UTF-8
+
+将以上几行中的“UTF-8”修改为“GBK”，否则控制台日志可能显示乱码

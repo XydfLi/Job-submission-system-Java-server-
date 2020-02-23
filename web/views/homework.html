@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/homework.css" rel="stylesheet" type="text/css">
+    <!--外接CSS-->
+    <title>HomeWork</title>
+    <!--外接JS-->
+    <script src="js/jquery.js"></script>
+    <script src="js/homework.js"></script>
+</head>
+
+<body>
+    
+    <div id="login_id">
+        <span id="title">欢迎使用作业提交系统！</span><br >
+        <input type="text" placeholder="请输入考核id" id="input_id"><br >
+        <input type="button" value="提交" id="submit_btn">
+    </div>
+
+    <div id="content">
+        <div id="header">
+            <span id="content_name">作业提交系统</span>
+        </div>
+
+        <div id="content_explain">
+            <span id="content_explain_text">收件说明</span>
+        </div>
+
+        <div id="content_title">
+            <span class="line"></span>
+            <span id="content_title_name">作业提交区域</span>
+            <span class="line"></span>
+        </div>
+
+        <form id="content_require" target="index">
+            <div id="content_left">
+                <span class="require">* </span>姓名：
+                <input type="text" name="user_name" id="user_name" required oninvalid="setCustomValidity('姓名不能为空！')" oninput="setCustomValidity('')">
+            </div>
+
+            <div id="content_right">
+                <span class="require">* </span>学号：
+                <input type="text" name="user_number" id="user_number" required oninvalid="setCustomValidity('学号不能为空！')" oninput="setCustomValidity('')">
+            </div>
+
+            <label for="file"><div id="content_file">
+                <span id="tips">拖拽文件上传(或点击)</span>
+                <input type="file" name="file" id="file" accept="application/x-zip-compressed" title="点击此处/拖拽文件至此处">
+            </div></label>
+
+            <div id="content_submit">
+                <input type="submit" value="提交" id="upload">
+            </div>
+        </form>
+    </div>
+
+    <div id="success">
+        提交成功！<br >
+        <input type="button" value="返回" id="back_btn">
+    </div>
+
+    <iframe name="index" id="index"></iframe>
+
+</body>
+</html>

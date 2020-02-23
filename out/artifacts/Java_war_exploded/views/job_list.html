@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/job_list.css" rel="stylesheet" type="text/css">
+    <link href="css/edit_job.css" rel="stylesheet" type="text/css">
+    <link href="css/job_detail.css" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--外接CSS-->
+    <title>JobList</title>
+    <!--外接JS-->
+    <script src="js/jquery.js"></script>
+    <script src="js/job_list.js"></script>
+    <script src="js/edit_job.js"></script>
+    <script src="js/job_detail.js"></script>
+</head>
+
+<body>
+    
+<div id="job_list">
+    <div id="title">
+        考核列表
+    </div>
+
+    <div id="job_table">
+        <table id="job">
+            <tbody>
+                <tr>
+                    <th class="id">考核id</th>
+                    <th class="name">考核名称</th>
+                    <th class="begin_time">开始时间</th>
+                    <th class="ddl">截止时间</th>
+                    <th class="state">考核状态</th>
+                    <th class="num">提交人数</th>
+                    <th class="operate">操作</th>
+                </tr>
+                <!--填充内容-->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="page_box">
+        共 <span id="total_cnt">0</span> 条
+        <input type="button" id="pre_page" class="page_btn" value="上一页">
+        当前为第 <span id="page_num">1</span> 页
+        <input type="button" id="next_page" class="page_btn" value="下一页">
+    </div>
+</div>
+
+<div id="edit_job">
+    <div id="back_title">
+        <i class="fa fa-arrow-left fa-lg fa-fw back" id="eback"></i>
+    </div>
+
+    <form id="job_message" method="POST" target="no_show">
+        <div id="jname">
+            <span class="require">* </span>考核名称：
+            <input type="text" name="job_name" required oninvalid="setCustomValidity('考核名称不能为空！')" oninput="setCustomValidity('')">
+        </div>
+
+        <div id="jddl">
+            <span class="require">* </span>截止日期：
+            <input type="date" name="job_deadline" required oninvalid="setCustomValidity('截止日期不能为空！')" oninput="setCustomValidity('')">
+        </div>
+
+        <div id="jexplain">
+            &nbsp;&nbsp;考核说明：
+            <textarea name="job_explain" id="job_explain"></textarea>
+        </div>
+
+        <input type="submit" id="job_btn" value="保存">
+    </form>
+
+    <iframe name="no_show"></iframe>
+</div>
+
+<div id="job_detail">
+    <div id="detail_title">
+        <i class="fa fa-arrow-left fa-lg fa-fw back" id="hback"></i>
+        <span id="delt">
+            批量删除
+        </span>
+    </div>
+
+    <div id="hjob_table">
+        <table id="hjob">
+            <tbody>
+                <tr>
+                    <th id="check"><input type="checkbox"></th>
+                    <th class="hnum">学号</th>
+                    <th class="hname">姓名</th>
+                    <th class="hup_time">提交时间</th>
+                    <th class="hstate">作业状态</th>
+                    <th class="hoperate">操作</th>
+                </tr>
+                <!--填充内容-->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="hpage_box">
+        共 <span id="htotal_cnt">0</span> 条
+        <input type="button" id="hpre_page" class="page_btn" value="上一页">
+        当前为第 <span id="hpage_num">1</span> 页
+        <input type="button" id="hnext_page" class="page_btn" value="下一页">
+    </div>
+</div>
+
+</body>
+</html>

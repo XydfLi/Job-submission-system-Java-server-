@@ -1,0 +1,67 @@
+
+#job_detail{
+    display: none;
+}
+
+#detail_title{
+    color: #83878f;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    margin-top: 2%;
+    margin-left: 3%;
+}
+
+#delt{
+    float: right;
+    margin-right: 11%;
+    color: #fff;
+    font-size: 1.6rem;
+    background-color: #357eff;
+    padding: 0.6% 1%;
+    border: 1px #357eff solid;
+    border-radius: 0.5rem;
+}
+
+#delt:hover{
+    color: #357eff;
+    background-color: #fff;
+}
+
+#hjob_table{
+    width: 80%;
+    margin: 3% auto 2% auto;
+}
+
+.hname, .hup_time, .hnum, .hstate{
+    width: 20%;
+    height: 4rem;
+}
+
+.hoperate{
+    width: 10%;
+    height: 4rem;
+}
+
+input[type=checkbox]{
+    width: 80%;
+    height: 2rem;
+}
+
+.fa-download{
+    margin: 0 2%;
+    background-color: #f3f8fe;
+    color: #83878f;
+}
+
+#hpage_box{
+    position: fixed;
+    bottom: 0;
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+    margin-bottom: 2%;
+    font-size: 1.4rem;
+    height: 2.5rem;
+    color: #222;
+}

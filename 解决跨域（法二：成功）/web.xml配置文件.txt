@@ -1,0 +1,8 @@
+    <filter>
+        <filter-name>cors</filter-name>
+        <filter-class>com.api.SimpleCORSFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>cors</filter-name>
+        <url-pattern>/api/*</url-pattern>
+    </filter-mapping>

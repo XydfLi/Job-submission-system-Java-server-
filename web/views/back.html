@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/back.css" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--外接CSS-->
+    <title>BackStage</title>
+    <!--外接JS-->
+    <script src="js/jquery.js"></script>
+    <script src="js/back.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="title">作业提交系统</div>
+        <span id="date">2020/1/20<br >
+        &nbsp;&nbsp;&nbsp;星期日
+        </span>
+    </div>
+    
+    <div id="sidebar">
+        <ul>
+        <li class="tag">
+            <a href="new_job.html" target="index">
+                <i class="fa fa-pencil fa-lg fa-fw"></i> &nbsp;新建考核
+            </a>
+        </li>
+
+        <li class="tag">
+            <a href="job_list.html" target="index">
+                <i class="fa fa-list-ul fa-lg fa-fw"></i> &nbsp;考核列表
+            </a>
+        </li>
+        
+        <li class="tag">
+            <i class="fa fa-cog fa-lg fa-fw"></i> &nbsp;个人设置
+            <i class="fa fa-angle-down fa-lg fa-fw" id="show_tag"></i>
+            <i class="fa fa-angle-up fa-lg fa-fw" id="hide_tag"></i>
+            <ul id="second_title">
+                <li><a href="change_pswd.html" target="index">修改密码</a></li>
+                <li><a href="#" id="login_out">退出登陆</a></li><!--返回登陆页面-->
+            </ul>
+        </li>
+        </ul>
+    </div>
+
+    <iframe name="index" id="index"></iframe>
+
+</body>
+</html>
